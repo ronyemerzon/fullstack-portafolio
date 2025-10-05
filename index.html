@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="avatar"></div>
+
+    <form>
+        <div class="input-group">
+            <i class="icon">✉️</i>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" placeholder="Email ID" required autocomplete="username">
+        </div>
+
+        <div class="input-group">
+            <i class="icon">🔒</i>
+            <input type="password" id="password" placeholder="Password" required minlength="6" autocomplete="current-password">
+            <span class="toggle" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox" checked>
+                Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit">LOGIN</button>
+    </form>
+</div>
+<script>
+    function togglePassword() {
+        const input = document.getElementById("password");
+        input.type = input.type === "password" ? "text" : "password";
+    }
+</script>
+</body>
+</html>

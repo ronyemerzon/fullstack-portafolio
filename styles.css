@@ -1,0 +1,181 @@
+/* Fuente general y reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at top left, #1e0038, #1b0c2b, #0f001a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor translúcido */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 320px;
+    backdrop-filter: blur(20px);
+    box-shadow:
+            0 0 40px rgba(0, 0, 0, 0.3),
+            inset 0 0 20px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-align: center;
+
+}
+
+/* Avatar circular */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 30px;
+}
+
+/* Grupo de input */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.7;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Opciones */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.options a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.options a:hover {
+    color: #fff;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, #7a2ff2, #4d5efc);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #9d57ff, #6c78ff);
+}
+
+.login-container{
+
+}
+
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container{
+    animation: fadeInUp 2s ease forwards;
+}
+
+
+body {
+    background: linear-gradient(-45deg, #1e0038, #3a0072, #0f001a, #1b0c2b);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+.input-group input:focus {
+    border-color: #9d57ff;
+    box-shadow: 0 2px 6px rgba(157, 87, 255, 0.4);
+}
+
+.toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+@media (max-width: 480px){
+    .login-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    .input-group input {
+        font-size: 16px;
+    }
+}
+
+:root {
+    --primary: #7a2ff2;
+    --secondary: #4d5efc;
+    --bg-glass: rgba(255, 255, 255, 0.1);
+}
+
+button {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+
+
+
+
+
+
+
+
+
