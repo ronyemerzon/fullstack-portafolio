@@ -31,7 +31,7 @@
   <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css">
@@ -61,10 +61,11 @@
           </div>
         </div>
 
-        <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-          <a href="#perfil" class="hover:text-sky-400 transition-colors">Sobre Mí</a>
+        <div class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
           <a href="#habilidades" class="hover:text-sky-400 transition-colors">Habilidades</a>
           <a href="#proyectos" class="hover:text-sky-400 transition-colors">Proyectos ERP</a>
+          <a href="#videos" class="hover:text-sky-400 transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-red-500">play_circle</span> Video Demos</a>
+          <a href="#codigo" class="hover:text-sky-400 transition-colors flex items-center gap-1"><span class="material-symbols-outlined text-[18px] text-sky-400">code</span> Código Fuente</a>
           <a href="#experiencia" class="hover:text-sky-400 transition-colors">Experiencia</a>
           <a href="#educacion" class="hover:text-sky-400 transition-colors">Educación</a>
         </div>
@@ -80,7 +81,7 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="relative z-10 py-20 lg:py-28 overflow-hidden">
+  <section class="relative z-10 py-20 lg:py-24 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -104,11 +105,15 @@
           <div class="flex flex-wrap items-center gap-4 pt-2">
             <a href="#proyectos" class="px-6 py-3.5 bg-sky-500 hover:bg-sky-400 text-slate-950 font-black text-sm rounded-xl shadow-xl shadow-sky-500/25 active:scale-95 transition-all inline-flex items-center gap-2">
               <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
-              Ver Proyectos Destacados
+              Ver Proyectos ERP
             </a>
-            <a href="https://github.com/ronyemerzon/fullstack-portafolio" target="_blank" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm rounded-xl active:scale-95 transition-all inline-flex items-center gap-2">
+            <a href="#videos" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 border border-red-500/40 text-red-400 font-bold text-sm rounded-xl active:scale-95 transition-all inline-flex items-center gap-2">
+              <span class="material-symbols-outlined text-[20px] text-red-500">play_circle</span>
+              Ver Video Demos
+            </a>
+            <a href="#codigo" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-bold text-sm rounded-xl active:scale-95 transition-all inline-flex items-center gap-2">
               <span class="material-symbols-outlined text-[20px]">code</span>
-              Repositorio GitHub
+              Muestras de Código
             </a>
           </div>
 
@@ -395,6 +400,239 @@
               Ver Detalles del CRM
             </button>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NUEVA SECCIÓN: VIDEO DEMOS EN VIVO DE LOS SISTEMAS -->
+  <section id="videos" class="relative z-10 py-20 bg-slate-900/40 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[16px] text-red-500">play_circle</span>
+          Demostración en Video y Funcionamiento
+        </div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Videos de los Sistemas en Uso</h2>
+        <p class="text-sm text-slate-400">Demostración en tiempo real del funcionamiento, módulos comerciales, generación de PDFs y aplicaciones móviles.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- VIDEO 1: ERP ICO LOGÍSTICA -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden space-y-4 p-5 flex flex-col justify-between hover:border-red-500/40 transition-all">
+          <div class="space-y-3">
+            <div class="relative aspect-video bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 group flex items-center justify-center">
+              <!-- Video Placeholder / Player -->
+              <video class="w-full h-full object-cover" controls poster="profile_photo.jpg">
+                <source src="videos/erp_demo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video HTML5.
+              </video>
+              <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center pointer-events-none group-hover:bg-slate-950/40 transition-all">
+                <span class="material-symbols-outlined text-[48px] text-red-500 drop-shadow-md">play_circle</span>
+                <span class="text-xs font-bold text-white mt-1">Video Demo: ERP ICO Logística</span>
+                <span class="text-[10px] text-slate-400">Cotizaciones PDF & Activos TI</span>
+              </div>
+            </div>
+
+            <h3 class="text-base font-bold text-white">Demo: ERP ICO Logística</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Video demostrativo mostrando el flujo de cotizaciones comerciales, generación instantánea en PDF con jsPDF y el módulo de activos de TI con firmas digitalizadas.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-red-400">videocam</span> Video HD / Demo</span>
+            <span class="font-bold text-sky-400">Java 21 + Angular</span>
+          </div>
+        </div>
+
+        <!-- VIDEO 2: ECOSISTEMA RRHH -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden space-y-4 p-5 flex flex-col justify-between hover:border-red-500/40 transition-all">
+          <div class="space-y-3">
+            <div class="relative aspect-video bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 group flex items-center justify-center">
+              <video class="w-full h-full object-cover" controls poster="profile_photo.jpg">
+                <source src="videos/rrhh_demo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video HTML5.
+              </video>
+              <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center pointer-events-none group-hover:bg-slate-950/40 transition-all">
+                <span class="material-symbols-outlined text-[48px] text-red-500 drop-shadow-md">play_circle</span>
+                <span class="text-xs font-bold text-white mt-1">Video Demo: Control Asistencia</span>
+                <span class="text-[10px] text-slate-400">App Móvil MAUI + Panel Web</span>
+              </div>
+            </div>
+
+            <h3 class="text-base font-bold text-white">Demo: Asistencia & Personal RRHH</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Recorrido en video de la app móvil en .NET MAUI para registro de marcaciones de horario y el panel web administrativo en Angular.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-red-400">videocam</span> Video HD / Demo</span>
+            <span class="font-bold text-indigo-400">.NET MAUI + Angular</span>
+          </div>
+        </div>
+
+        <!-- VIDEO 3: CRM MÓVIL KOTLIN -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden space-y-4 p-5 flex flex-col justify-between hover:border-red-500/40 transition-all">
+          <div class="space-y-3">
+            <div class="relative aspect-video bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 group flex items-center justify-center">
+              <video class="w-full h-full object-cover" controls poster="profile_photo.jpg">
+                <source src="videos/crm_demo.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video HTML5.
+              </video>
+              <div class="absolute inset-0 bg-slate-950/60 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center pointer-events-none group-hover:bg-slate-950/40 transition-all">
+                <span class="material-symbols-outlined text-[48px] text-red-500 drop-shadow-md">play_circle</span>
+                <span class="text-xs font-bold text-white mt-1">Video Demo: CRM & App Kotlin</span>
+                <span class="text-[10px] text-slate-400">Android Studio + Spring Boot</span>
+              </div>
+            </div>
+
+            <h3 class="text-base font-bold text-white">Demo: CRM & App Móvil Comercial</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Demostración de la aplicación nativa en Kotlin para vendedores de campo y la sincronización con el CRM Web Back Office.
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-red-400">videocam</span> Video HD / Demo</span>
+            <span class="font-bold text-emerald-400">Kotlin + Spring Boot</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NUEVA SECCIÓN: EXPLORADOR DE CÓDIGO FUENTE Y ARQUITECTURA (SANITIZADO) -->
+  <section id="codigo" class="relative z-10 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold uppercase tracking-wider">
+          <span class="material-symbols-outlined text-[16px]">code</span>
+          Código Fuente Sanitizado & Arquitectura
+        </div>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight">Muestras de Código Reales del Sistema</h2>
+        <p class="text-sm text-slate-400">Inspecciona fragmentos reales de controladores en Java 21, componentes Angular y esquemas relacionales SQL Server.</p>
+      </div>
+
+      <!-- IDE / CODE VIEWER BOX -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl">
+        
+        <!-- IDE Header / Tabs -->
+        <div class="bg-slate-950 border-b border-slate-800 px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+            <span class="text-xs font-bold text-slate-400 ml-2 font-['Fira_Code']">ICO-ERP / Muestra-Sanitizada</span>
+          </div>
+
+          <!-- Tabs Controls -->
+          <div class="flex items-center gap-2 bg-slate-900 p-1 rounded-xl border border-slate-800 text-xs font-bold">
+            <button onclick="showCodeTab('backend')" id="tab-backend" class="px-4 py-2 rounded-lg bg-sky-500 text-slate-950 transition-all cursor-pointer">
+              ☕ Java 21 Spring Boot
+            </button>
+            <button onclick="showCodeTab('frontend')" id="tab-frontend" class="px-4 py-2 rounded-lg text-slate-400 hover:text-white transition-all cursor-pointer">
+              🅰️ Angular Component
+            </button>
+            <button onclick="showCodeTab('database')" id="tab-database" class="px-4 py-2 rounded-lg text-slate-400 hover:text-white transition-all cursor-pointer">
+              🛢️ SQL Server Schema
+            </button>
+          </div>
+        </div>
+
+        <!-- CODE CONTENT PANELS -->
+        <div class="p-6 font-['Fira_Code',monospace] text-xs leading-relaxed overflow-x-auto bg-slate-950/70 max-h-[500px]">
+          
+          <!-- TAB 1: BACKEND JAVA -->
+          <div id="code-backend" class="space-y-2">
+            <div class="text-slate-500">// File: projects-code/ico-erp-demo/backend/SistemasController.java</div>
+            <pre class="text-sky-300"><code><span class="text-purple-400">@RestController</span>
+<span class="text-purple-400">@RequestMapping</span>(<span class="text-emerald-300">"/api/sistemas"</span>)
+<span class="text-blue-400">public class</span> <span class="text-amber-300">SistemasController</span> {
+
+    <span class="text-purple-400">@Autowired</span>
+    <span class="text-blue-400">private</span> ActivoTiRepository activoTiRepository;
+
+    <span class="text-purple-400">@PostMapping</span>(<span class="text-emerald-300">"/activos-ti"</span>)
+    <span class="text-purple-400">@Transactional</span>
+    <span class="text-blue-400">public</span> ResponseEntity&lt;?&gt; <span class="text-amber-300">crearActivoTi</span>(<span class="text-purple-400">@RequestBody</span> ActivoTi activo) {
+        <span class="text-purple-400">try</span> {
+            <span class="text-purple-400">if</span> (activo.getCodigoPatrimonial() == null) {
+                String prefix = <span class="text-emerald-300">"ICO-LAP-"</span>;
+                long count = activoTiRepository.count() + 1;
+                activo.setCodigoPatrimonial(prefix + String.format(<span class="text-emerald-300">"%04d"</span>, count));
+            }
+            ActivoTi guardado = activoTiRepository.save(activo);
+            <span class="text-purple-400">return</span> ResponseEntity.ok(guardado);
+        } <span class="text-purple-400">catch</span> (Exception ex) {
+            <span class="text-purple-400">return</span> ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ex.getMessage());
+        }
+    }
+}</code></pre>
+          </div>
+
+          <!-- TAB 2: FRONTEND ANGULAR -->
+          <div id="code-frontend" class="hidden space-y-2">
+            <div class="text-slate-500">// File: projects-code/ico-erp-demo/frontend/activos.ts</div>
+            <pre class="text-indigo-300"><code><span class="text-purple-400">@Component</span>({
+  selector: <span class="text-emerald-300">'app-sistemas-activos'</span>,
+  standalone: <span class="text-blue-400">true</span>,
+  templateUrl: <span class="text-emerald-300">'./activos.html'</span>
+})
+<span class="text-blue-400">export class</span> <span class="text-amber-300">SistemasActivos</span> <span class="text-blue-400">implements</span> OnInit {
+  <span class="text-blue-400">private</span> fb = inject(FormBuilder);
+  <span class="text-blue-400">private</span> sistemasService = inject(SistemasService);
+
+  initFormActivo() {
+    <span class="text-blue-400">this</span>.formActivo = <span class="text-blue-400">this</span>.fb.group({
+      codigoPatrimonial: [<span class="text-emerald-300">''</span>],
+      tipoActivo: [<span class="text-emerald-300">'LAPTOP'</span>, Validators.required],
+      marca: [<span class="text-emerald-300">''</span>, Validators.required]
+    });
+
+    <span class="text-blue-400">this</span>.formActivo.get(<span class="text-emerald-300">'tipoActivo'</span>)?.valueChanges.subscribe(tipo => {
+      <span class="text-blue-400">const</span> nextCode = <span class="text-blue-400">this</span>.generarSiguienteCodigo(tipo);
+      <span class="text-blue-400">this</span>.formActivo.patchValue({ codigoPatrimonial: nextCode }, { emitEvent: <span class="text-blue-400">false</span> });
+    });
+  }
+}</code></pre>
+          </div>
+
+          <!-- TAB 3: DATABASE SQL -->
+          <div id="code-database" class="hidden space-y-2">
+            <div class="text-slate-500">-- File: projects-code/ico-erp-demo/database/schema_ti.sql</div>
+            <pre class="text-emerald-300"><code><span class="text-blue-400">CREATE SCHEMA</span> TI;
+<span class="text-blue-400">GO</span>
+
+<span class="text-blue-400">CREATE TABLE</span> TI.ACTIVO_TI (
+    id_activo <span class="text-purple-400">INT IDENTITY(1,1) PRIMARY KEY</span>,
+    codigo_patrimonial <span class="text-purple-400">VARCHAR(50) UNIQUE NOT NULL</span>,
+    tipo_activo <span class="text-purple-400">VARCHAR(50) NOT NULL</span>,
+    marca <span class="text-purple-400">VARCHAR(100) NOT NULL</span>,
+    modelo <span class="text-purple-400">VARCHAR(100) NOT NULL</span>,
+    numero_serie <span class="text-purple-400">VARCHAR(100) NOT NULL</span>,
+    estado <span class="text-purple-400">VARCHAR(30) NOT NULL DEFAULT</span> <span class="text-amber-300">'DISPONIBLE'</span>,
+    id_empleado_asignado <span class="text-purple-400">INT NULL</span>,
+    CONSTRAINT FK_ACTIVO_EMPLEADO <span class="text-blue-400">FOREIGN KEY</span> (id_empleado_asignado) <span class="text-blue-400">REFERENCES</span> dbo.EMPLEADO(id)
+);
+<span class="text-blue-400">GO</span></code></pre>
+          </div>
+
+        </div>
+
+        <!-- Footer Link to GitHub Folder -->
+        <div class="bg-slate-950 border-t border-slate-800 p-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <span class="text-slate-400">📁 Explora los archivos de código sanitizados completos directamente en el repositorio:</span>
+          <a href="https://github.com/ronyemerzon/fullstack-portafolio/tree/main/projects-code" target="_blank" class="px-4 py-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl transition-all inline-flex items-center gap-1.5 shrink-0">
+            <span class="material-symbols-outlined text-[16px]">folder_open</span>
+            Ver Carpeta /projects-code en GitHub
+          </a>
         </div>
 
       </div>

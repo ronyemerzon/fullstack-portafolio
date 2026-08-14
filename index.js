@@ -1,4 +1,4 @@
-// Interactive JavaScript for Portfolio Modals & Features
+// Interactive JavaScript for Portfolio Modals & Code Viewer Tabs
 
 function openModal(id) {
   const modal = document.getElementById(id);
@@ -26,3 +26,25 @@ window.onclick = function(event) {
     }
   });
 };
+
+// Interactive Code Viewer Tabs Controller
+function showCodeTab(tabName) {
+  const tabs = ['backend', 'frontend', 'database'];
+  
+  tabs.forEach(tab => {
+    const content = document.getElementById(`code-${tab}`);
+    const button = document.getElementById(`tab-${tab}`);
+    
+    if (content && button) {
+      if (tab === tabName) {
+        content.classList.remove('hidden');
+        button.classList.add('bg-sky-500', 'text-slate-950');
+        button.classList.remove('text-slate-400', 'hover:text-white');
+      } else {
+        content.classList.add('hidden');
+        button.classList.remove('bg-sky-500', 'text-slate-950');
+        button.classList.add('text-slate-400', 'hover:text-white');
+      }
+    }
+  });
+}
