@@ -18,7 +18,7 @@ function closeModal(id) {
 
 // Close modal when clicking outside
 window.onclick = function(event) {
-  const modals = ['erpModal', 'rrhhModal', 'crmModal'];
+  const modals = ['erpModal', 'rrhhModal', 'appModal', 'crmModal'];
   modals.forEach(id => {
     const modal = document.getElementById(id);
     if (event.target === modal) {
