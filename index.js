@@ -18,7 +18,7 @@ function closeModal(id) {
 
 // Close modal when clicking outside
 window.onclick = function(event) {
-  const modals = ['erpModal', 'rrhhModal', 'appModal', 'crmModal'];
+  const modals = ['erpModal', 'nodeAwsModal', 'rrhhModal', 'appModal', 'crmModal'];
   modals.forEach(id => {
     const modal = document.getElementById(id);
     if (event.target === modal) {
@@ -29,7 +29,7 @@ window.onclick = function(event) {
 
 // Interactive Code Viewer Tabs Controller
 function showCodeTab(tabName) {
-  const tabs = ['backend', 'frontend', 'database'];
+  const tabs = ['backend', 'node', 'frontend', 'database'];
   
   tabs.forEach(tab => {
     const content = document.getElementById(`code-${tab}`);
